@@ -7,12 +7,15 @@ jscoverage reporter in browser
 ## Install
 
 ```
-$ spm install jscoverage --save
+$ spm install jscoverage-browser-reporter --save
 ```
 
 ## Usage
 
 ```js
-var jscoverageBrowserReporter = require('jscoverage');
+var reporter = require('jscoverage');
+var $ = require('jquery');
+var str = reporter();
+$(str).appendTo(body);
 // use jscoverageBrowserReporter
 ```

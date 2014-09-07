@@ -1,19 +1,15 @@
 var template = require('./lib/template.js');
-var $ = require('jquery');
+var _ = require('underscore');
 
-var jscoverageBrowserReporter = function(container) {
+var jscoverageBrowserReporter = function() {
   var cov = window._$jscoverage || {};
 
   cov = map(cov);
-//  jade.render($(container), 'coverage', {
-//    cov: cov,
-//    coverageClass: coverageClass
-//  });
   var domStr = template({
     cov: cov,
     coverageClass: coverageClass
   });
-  $(domStr).appendTo(container);
+  return domStr;
 
   /**
    * Map jscoverage data to a JSON structure
@@ -73,7 +69,7 @@ var jscoverageBrowserReporter = function(container) {
       source: {}
     };
 
-    data.source.forEach(function(line, num){
+    _.each(data.source, function(line, num) {
       num++;
 
       if (data[num] === 0) {

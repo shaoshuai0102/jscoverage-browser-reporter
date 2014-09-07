@@ -2,23 +2,30 @@
   "name": "jscoverage-browser-reporter",
   "version": "0.1.0",
   "description": "jscoverage reporter in browser",
-  "keywords": [],
-  "homepage": "",
+  "keywords": ["jscoverage", "reporter", "browser"],
+  "homepage": "https://github.com/shaoshuai0102/jscoverage-browser-reporter",
   "author": "shaoshuai0102 <shaoshuai0102@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:shaoshuai0102/jscoverage-browser-reporter.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/shaoshuai0102/jscoverage-browser-reporter/issues"
   },
   "licenses": "MIT",
   "spm": {
     "main": "index.js",
     "dependencies": {
+      "jquery": "1.7.2"
     },
     "devDependencies": {
       "expect.js": "0.3.1"
     }
+  },
+  "devDependencies": {
+    "gulp": "~3.8.7",
+    "gulp-jade": "~0.7.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-wrapper": "~0.1.5"
   }
 }

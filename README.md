@@ -2,7 +2,7 @@
 
 ---
 
-jscoverage reporter in browser
+jscoverage reporter in browser.
 
 ## Install
 
@@ -12,10 +12,17 @@ $ spm install jscoverage-browser-reporter --save
 
 ## Usage
 
-```js
-var reporter = require('jscoverage');
-var $ = require('jquery');
-var str = reporter();
-$(str).appendTo(body);
-// use jscoverageBrowserReporter
-```
+1. Convent your source files with [jscoverage](https://github.com/fishbar/jscoverage) first.
+2. Use these files in your test runner html instead of source files.
+
+       <script src="source-cov.js"></script>
+   
+3. Then use this module to get your coverage report.
+
+       seajs.use(['jquery/1.7.2/jquery', 'jscoverage-browser-reporter/0.1.0/index'], function($, reporter) {
+       
+         var reportDomStr = reporter();
+         $(reportDomStr).appendTo('#coverage-container');
+       
+       });
+

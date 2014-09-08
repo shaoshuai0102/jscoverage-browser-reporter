@@ -16,14 +16,18 @@ $ spm install jscoverage-browser-reporter --save
 
 2. Use these files in your test runner html instead of source files.
 
+   ```
        <script src="source-cov.js"></script>
+   ```
    
 3. Then use this module to get your coverage report.
 
-       seajs.use(['jquery/1.7.2/jquery', 'jscoverage-browser-reporter/0.1.0/index'], function($, reporter) {
-       
-         var reportDomStr = reporter();
-         $(reportDomStr).appendTo('#coverage-container');
-       
-       });
+   ```
+   seajs.use(['jquery/1.7.2/jquery', 'jscoverage-browser-reporter/0.1.0/index'], function($, reporter) {
+   
+     var reportDomStr = reporter();
+     $(reportDomStr).appendTo('#coverage-container');
+   
+   });
+   ```
 

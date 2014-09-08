@@ -31,3 +31,6 @@ $ spm install jscoverage-browser-reporter --save
    });
    ```
 
+## Example
+
+<img src="https://raw.githubusercontent.com/shaoshuai0102/jscoverage-browser-reporter/master/example.png" />

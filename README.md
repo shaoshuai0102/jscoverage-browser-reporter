@@ -13,6 +13,7 @@ $ spm install jscoverage-browser-reporter --save
 ## Usage
 
 1. Convent your source files with [jscoverage](https://github.com/fishbar/jscoverage) first.
+
 2. Use these files in your test runner html instead of source files.
 
        <script src="source-cov.js"></script>

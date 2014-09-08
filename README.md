@@ -17,7 +17,7 @@ $ spm install jscoverage-browser-reporter --save
 2. Use these files in your test runner html instead of source files.
 
    ```
-       <script src="source-cov.js"></script>
+   <script src="source-cov.js"></script>
    ```
    
 3. Then use this module to get your coverage report.
